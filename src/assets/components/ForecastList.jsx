@@ -44,11 +44,10 @@ export default function ForecastList({ forecastData }) {
     }
   };
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg">
+    <div className=" p-4 rounded-lg w-3/4">
       <h2 className="text-xl font-bold mb-4">Forecast 5 days</h2>
 
-      <div className="grid grid-cols-5 gap-2">
-        {console.log(forecastItems)}
+      <div className="grid grid-cols-5 gap-8">
         {forecastItems.map((item, index) => {
           const date = new Date(item.dt * 1000);
           const dayName = date.toLocaleDateString("en-En", {
@@ -58,11 +57,9 @@ export default function ForecastList({ forecastData }) {
           return (
             <div
               key={index}
-              className="flex flex-col items-center p-3 rounded-lg hover:bg-gray-100"
+              className="flex flex-col items-center gap-3 py-6 rounded-lg border-2 border-gray-300 bg-white"
             >
-              <span className="text-sm font-medium text-gray-800">
-                {dayName}
-              </span>
+              <span className="text-xl font-semibold">{dayName}</span>
               {getIcon(item.weather[0].main.toLowerCase())}
               <div className="mt-2 text-sm flex gap-2">
                 <span className="font-medium text-gray-800">
