@@ -6,9 +6,10 @@ import {
   CloudSnow,
   ArrowDown,
   ArrowUp,
+  Star,
 } from "lucide-react";
 
-export default function WeatherCard({ weatherData }) {
+export default function WeatherCard({ weatherData, isFavorite, onToggleFavorite }) {
   const getBgImage = (weather) => {
     const condition = weather.toLowerCase();
     switch (condition) {
@@ -61,8 +62,18 @@ export default function WeatherCard({ weatherData }) {
         backgroundImage: `url('${getBgImage(weatherData.weather[0].main)}')`,
       }}
     >
-      {/* Overlay oscuro para legibilidad */}
       <div className="absolute inset-0 bg-black/40 rounded-lg" />
+      
+      {/* Botón de Favorito */}
+      <button 
+        onClick={onToggleFavorite}
+        className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/20 hover:bg-black/40 transition-colors"
+      >
+        <Star 
+          className={`w-6 h-6 ${isFavorite ? "fill-yellow-400 text-yellow-400" : "text-white"}`} 
+        />
+      </button>
+
       <div className="flex flex-col items-start justify-end relative z-10">
         <article className="flex flex-row items-center space-x-0.5">
           <h2 className="text-lg md:text-2xl font-bold text-white">
