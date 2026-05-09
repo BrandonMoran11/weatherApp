@@ -18,7 +18,7 @@ export default function WeatherDetails({ weatherData }) {
       <h2 className="text-xl font-bold mb-4">Weather Details</h2>
       <ul className="grid grid-cols-3 gap-10">
         <li className="flex flex-col gap-2 justify-between">
-          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl">
+          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl w-80">
             <div className="bg-blue-100 p-2 rounded-4xl">
               <Droplets className="size-10 text-blue-500 " />
             </div>
@@ -31,7 +31,7 @@ export default function WeatherDetails({ weatherData }) {
           </div>
         </li>
         <li className="flex flex-col gap-2 justify-between">
-          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl">
+          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl w-80">
             <div className="bg-green-200 p-2 rounded-4xl">
               <Wind className="size-6 text-green-600" />
             </div>
@@ -44,7 +44,7 @@ export default function WeatherDetails({ weatherData }) {
           </div>
         </li>
         <li className="flex flex-col gap-2 justify-between">
-          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl">
+          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl w-80">
             <div className="bg-cyan-100 p-2 rounded-4xl">
               <BarChart className="size-6 text-cyan-600" />
             </div>
@@ -57,7 +57,7 @@ export default function WeatherDetails({ weatherData }) {
           </div>
         </li>
         <li className="flex flex-col gap-2 justify-between">
-          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl">
+          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl w-80">
             <div className="bg-indigo-200 p-2 rounded-4xl">
               <Eye className="size-6 text-indigo-500" />
             </div>
@@ -70,7 +70,7 @@ export default function WeatherDetails({ weatherData }) {
           </div>
         </li>
         <li className="flex flex-col gap-2 justify-between">
-          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8  bg-white text-3xl">
+          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8  bg-white text-3xl w-80">
             <div className="bg-amber-100 p-2 rounded-4xl">
               <Sunrise className="size-6 text-amber-500" />
             </div>
@@ -83,7 +83,7 @@ export default function WeatherDetails({ weatherData }) {
           </div>
         </li>
         <li className="flex flex-col gap-2 justify-between">
-          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl">
+          <div className="flex flex-row items-center gap-4 border-2 border-gray-300 rounded-3xl p-8 bg-white text-3xl w-80">
             <div className="bg-orange-200 p-2 rounded-4xl">
               <Sunset className="size-6 text-orange-500" />
             </div>

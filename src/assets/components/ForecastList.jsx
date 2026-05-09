@@ -63,7 +63,7 @@ export default function ForecastList({ forecastData }) {
               {getIcon(item.weather[0].main.toLowerCase())}
               <div className="mt-2 text-sm flex gap-2">
                 <span className="font-medium text-gray-800">
-                  {Math.round(item.main.temp_max)}°
+                  <strong>{Math.round(item.main.temp_max)}°</strong>
                 </span>
                 <span className="text-gray-500">
                   {Math.round(item.main.temp_min)}°

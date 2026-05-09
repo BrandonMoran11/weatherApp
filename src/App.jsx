@@ -6,7 +6,7 @@ import WeatherDetails from "./assets/components/WeatherDetails";
 import Search from "./assets/components/search";
 import Header from "./assets/components/Header";
 import axios from "axios";
-import { Cloudy } from "lucide-react";
+import WeatherLogo from "./assets/components/WeatherLogo";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -70,9 +70,9 @@ function App() {
   return (
     <div className="flex flex-row min-h-screen bg-gray-200">
       <aside className="flex flex-row w-64 shrink-0 bg-gray-200 border-r-2 border-gray-300 p-6 mt-3 gap-4">
-        <Cloudy className="size-12 text-gray-500" />
+        <WeatherLogo className="w-12 h-12" />
         <div>
-          <h1 className="text-2xl">
+          <h1 className="text-xl">
             Weather <span className="font-bold">App</span>
           </h1>
 

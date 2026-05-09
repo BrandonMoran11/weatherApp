@@ -1,4 +1,12 @@
-import { Sun, CloudRain, Cloudy, CloudFog, CloudSnow } from "lucide-react";
+import {
+  Sun,
+  CloudRain,
+  Cloudy,
+  CloudFog,
+  CloudSnow,
+  ArrowDown,
+  ArrowUp,
+} from "lucide-react";
 
 export default function WeatherCard({ weatherData }) {
   const getBgImage = (weather) => {
@@ -83,6 +91,16 @@ export default function WeatherCard({ weatherData }) {
             {weatherData.main.temp}°C
           </p>
         </div>
+        <span className="flex flex-row gap-2 text-white/80 font-semibold self-end">
+          <p className="flex flex-row items-center">
+            <ArrowUp className="w-4 h-4" /> {weatherData.main.temp_max}
+            °C
+          </p>
+          <p className="flex flex-row items-center ">
+            <ArrowDown className="w-4 h-4" /> {weatherData.main.temp_min}
+            °C
+          </p>
+        </span>
         <p className="text-white/70 font-semibold self-end">
           FeelsLike {weatherData.main.feels_like}°C
         </p>
