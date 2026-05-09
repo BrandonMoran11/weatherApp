@@ -7,6 +7,7 @@ export default function Search({ onSearchTermChange, isLoading }) {
     e.preventDefault();
     if (ciudad.trim() && onSearchTermChange && !isLoading) {
       onSearchTermChange(ciudad);
+      setCiudad("");
     }
   };
 
@@ -24,14 +25,14 @@ export default function Search({ onSearchTermChange, isLoading }) {
           value={ciudad}
           onChange={handleInputChange}
           disabled={isLoading}
-          className={`w-2/6 p-4 bg-white backdrop-blur-sm border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+          className={`w-full sm:w-3/5 lg:w-2/6 p-3 lg:p-4 bg-white backdrop-blur-sm border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
             isLoading ? "opacity-50 cursor-not-allowed" : ""
           }`}
         />
         <button
           type="submit"
           disabled={isLoading || !ciudad.trim()}
-          className={`h-14 text-white p-2 rounded-xl ml-2 transition duration-200 ${
+          className={`h-10 lg:h-14 text-white p-2 px-4 rounded-xl ml-2 transition duration-200 whitespace-nowrap ${
             isLoading || !ciudad.trim()
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-blue-500 hover:bg-blue-400"

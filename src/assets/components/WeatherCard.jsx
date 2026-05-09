@@ -56,7 +56,7 @@ export default function WeatherCard({ weatherData }) {
 
   return (
     <div
-      className="flex flex-row justify-between p-10 rounded-lg shadow-lg w-3/4 h-80 bg-cover bg-center relative overflow-hidden"
+      className="flex flex-col sm:flex-row justify-between p-6 lg:p-10 rounded-lg shadow-lg w-full lg:w-3/4 h-auto min-h-[200px] lg:min-h-[320px] bg-cover bg-center relative overflow-hidden gap-4"
       style={{
         backgroundImage: `url('${getBgImage(weatherData.weather[0].main)}')`,
       }}

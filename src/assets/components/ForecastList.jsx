@@ -44,10 +44,10 @@ export default function ForecastList({ forecastData }) {
     }
   };
   return (
-    <div className=" p-4 rounded-lg w-3/4">
+    <div className="p-4 rounded-lg w-full lg:w-3/4">
       <h2 className="text-xl font-bold mb-4">Forecast 5 days</h2>
 
-      <div className="grid grid-cols-5 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 lg:gap-8">
         {forecastItems.map((item, index) => {
           const date = new Date(item.dt * 1000);
           const dayName = date.toLocaleDateString("en-En", {
